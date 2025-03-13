@@ -1,6 +1,5 @@
 package com.task04;
 
-
 import com.amazonaws.services.lambda.runtime.Context;
 import com.amazonaws.services.lambda.runtime.RequestHandler;
 import com.syndicate.deployment.annotations.events.SqsTriggerEventSource;
@@ -10,8 +9,6 @@ import com.syndicate.deployment.model.RetentionSetting;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
-
 
 @LambdaHandler(
     lambdaName = "sqs_handler",
@@ -45,6 +42,4 @@ public class SqsHandler implements RequestHandler<Map<String, Object>, Map<Strin
 		resultMap.put("body", "Hello from SQS Lambda");
 		return resultMap;
 	}
-
-
 }
